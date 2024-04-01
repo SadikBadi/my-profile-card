@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animeted</title>
+
+    <style>
+        * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #222;
+
+  }
+
+  #box {
+    max-width: 400px;
+    max-height: 400px;
+    color: #0e0d0d;
+    background: #f6fff8;
+    position: relative;
+    margin: 150px auto;
+  
+  }
+
+  #box::after,
+  #box::before {
+    content: "";
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+    background-size: 400%;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    z-index: -1;
+    animation: animated-shadow 10s linear infinite alternate;
+  }
+
+  #box::after {
+    filter: blur(30px);
+  }
+
+  @keyframes animated-shadow {
+    0% {
+      background-position: 0 0;
+    }
+
+    50% {
+      background-position: 100% 0;
+    }
+
+    100% {
+      background-position: 0 0;
+    }
+  }
+
+  .profile-img{
+    width: 158px;
+    height: 158px;
+    border-radius: 80%;
+    border: 2px solid cornflowerblue;
+    margin-top:10px ;
+    padding: 2px;
+    background-color: #fff;
+
+    
+}
+.profile-image{
+    margin-top: 0%;
+    padding-top: 5px;
+    height: 130px;    
+    background-color: cornflowerblue;
+}
+
+
+.profile-info {
+    padding: 0;
+    text-align: center;
+}
+
+.profile-info h1 {
+    margin-top:40px ;
+    font-family: initial;
+   
+    
+}
+
+.profile-info h4 {
+    padding-top: 0px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 0;
+}
+
+.social-icons {
+    margin: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+margin-right: 10px;
+}
+
+.social-icons img {
+    width: 50%;
+    padding: 3px;
+    height: 50%;
+    border-radius: 50%;
+}
+.social-icons .link{
+    width: 35px;
+    height: 35px;
+    margin-left: px;
+    box-shadow: 4px 3px 3px #7c7e7b;
+
+}
+.social-icons :hover{
+    border-radius: 30%; 
+    width: 34px;
+    height: 34px;
+}
+
+button{
+    margin: 0 10px 10px ;
+    padding: 0 10px;
+    background-color: rgb(32, 139, 240);
+    border-radius: 40%;
+    height: 35px;
+    font-weight: 700;
+    width: 100px;
+    border: 2px solid rgb(114, 112, 112);
+    box-shadow: 5px 3px 3px #7c7e7b;
+}
+.btn :hover{
+    background-color: rgb(153, 210, 245);
+    border: 2px solid rgb(36, 104, 104);
+    border-radius: 30%;
+}
+
+    </style>
+</head>
+<body>
+    <div id="box">
+      <div class="profile-card">
+        
+        <div class="profile-info">
+            <div class="profile-image">
+            <img src="images/profile Photo 2.jpg" alt="" class="profile-img">
+            </div>
+
+            <div class="me">
+            <h1>SADIK BADI</h1>
+            <h4>Front-end Developer</h4>
+            <div class="social-icons">
+                
+                <a href="https://www.facebook.com/sadik.badi.127" target="_blank"><img src="images/facebook.svg" alt="Facebook" style="background-color: #105df7"; class="link"></a>
+                <a href="https://www.instagram.com/sadik__badi" target="_blank"><img src="images/instagram.svg" alt="Instagram" style="background-color: #d80cebfd"; class="link" ></a>
+                <a href="https://linkedin.com/sadik-badi-338a1a2a4" target="_blank"><img src="images/linkedin.svg" alt="linkedin" style="background-color: #105df7"; class="link"></a>
+                <a href="https://web.telegram.org/Mr_badi_486." target="_blank"><img src="images/telegram.svg" alt="telegram" style="background-color: #105df7"; class="link"></a>
+            </div>
+            <div class="btn">
+                <button type="button">Contact me</button> 
+                <button type="button">Click Me!</button> 
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
